@@ -23,6 +23,7 @@ p {
 button {
     border: none;
     padding: 10px;
+    background-color: white;
     border-radius: 5px;
 }
 
@@ -50,6 +51,7 @@ div#itens button {
     font-family: var(--fonte-titulo);
     font-weight: bold;
     color: purple;
+    background-color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 8px;
@@ -57,6 +59,7 @@ div#itens button {
 
 div#itens img {
     height: 20px;
+    padding-right: 2px;
 }
 
 div#user {
@@ -76,13 +79,47 @@ div#user img{
 }
 
 header#navigation {
+    font-family: var(--fonte-padrao);
     background-color: rgb(66, 66, 104);
-    height: 12%;
+    height: 10%;
     padding: 0 30px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+img.brilho {
+    filter: invert(100);
+}
+
+header#navigation > nav select {
+    font-weight: bold;
+    font-size: 1em;
+    background-color: rgba(240, 248, 255, 0);
+    color: lightgray;
+    border: none;
+}
+
+header#navigation > nav button {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 9px;
+    margin: 0 8px;
+}
+
+button#premium {
+    color: rgb(189, 175, 48);
+    background-color: rgba(231, 179, 35, 0.281);
+}
+
+button#discord {
+    background-color: #5FB1DD;
+    color: white;
+}
+
+button#discord:hover {
+    background-color: #0076FF;
 }
 
 div#bot-info {
@@ -94,6 +131,10 @@ div#bot-info {
 div#bot-info img {
     height: 24px;
     width: 24px;
+}
+
+div#bot-info h1 {
+    font-size: 2.2em;
 }
 
 section#container-dados {
@@ -136,9 +177,17 @@ div#container-btn {
 }
 
 button#btn-discord {
-    background-color: lightblue;
+    background-color: #5FB1DD;
     color: white;
     gap: 5px;
+}
+
+button#btn-discord img {
+    filter: invert(100);
+}
+
+button#btn-discord:hover {
+    background-color: #0076FF;
 }
 
 button.btn-dados {
