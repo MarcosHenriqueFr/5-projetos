@@ -5,8 +5,9 @@
     --fonte-padrao: "Inter", Verdana, sans-serif;
 }
 
-body {
-    height: 100vh;
+body, html {
+    height: 100%;
+
 }
 
 h1, h2 {
@@ -19,14 +20,13 @@ p {
     font-size: 1.2em;
 }
 
-input {
+button {
     border: none;
     padding: 10px;
     border-radius: 5px;
 }
 
 div#container-ad {
-    min-width: 100vw;
     height: 8%;
     background-color: pink;
     display: flex;
@@ -46,6 +46,10 @@ div#itens {
     font-size: 0.7em;
 }
 
+div#itens img {
+    height: 20px;
+}
+
 header#navigation {
     background-color: rgb(66, 66, 104);
     height: 12%;
@@ -58,23 +62,29 @@ header#navigation {
 
 div#bot-info {
     display: flex;
+    align-items: center;
     gap: 10px;
+}
+
+div#bot-info img {
+    height: 24px;
+    width: 24px;
 }
 
 section#container-dados {
     background-color: blueviolet;
-    height: 80%;
+    height: 85%;
+    width: 100%;
     position: relative;
 }
 
 div#dados {
+    display: flex;
     background-color: rgb(153, 153, 17);
     text-align: left;
 
-    margin-left: 10%;
-    padding: 10px;
     height: 50%;
-    width: 100%;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -82,18 +92,39 @@ div#dados {
     transform: translate(-50%, -50%);
 }
 
-div#dados h1 {
+div#conteudo-dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 250px;
+}
+
+div#conteudo-dados h1{
     font-size: 3em;
+    font-weight: 700;
+}
+
+div#container-btn {
+    display: flex;
+    gap: 10px;
+}
+
+button#btn-discord {
+    background-color: lightblue;
+    color: white;
+    gap: 5px;
 }
 
 button.btn-dados {
     border: none;
+    display: flex;
     padding: 10px;
 }
 
 footer {
-    height: 12%;
-    background-color: black;
+    height: 130px;
+    background-color: rgb(31, 31, 31);
     color: white;
 }
 
@@ -102,8 +133,10 @@ div#footer-item {
     padding: 10px;
     margin: auto;
     text-align: center;
+    font-size: 0.8em;
 }
 
 div#footer-item  h2{
     margin: 10px 0;
+    font-size: 2em;
 }
