@@ -37,15 +37,21 @@ button {
 }
 
 /* Configurações de pseudo-classe do button */
-button:hover {
+button:hover, select:hover {
     cursor: pointer;
+}
+
+/* CONFIGURAÇÃO das IMAGENS que necessitam da inversão de cor */
+/* Fazer MODIFICAÇÕES DE GLOW NAS IMAGENS */
+img.brilho {
+    filter: invert(100);
 }
 
 /* INÍCIO DAS CONFIGURAÇÕES DE CONTAINER-AD */
 /* Configurações da aba de AD do site */
 div#container-ad {
     height: 8%;
-    background-color: pink;
+    background-image: linear-gradient(to right, #AD25E6, #E629D9, #E35282, #E488A6);
     display: flex;
     align-items: center;
 }
@@ -57,8 +63,8 @@ div#container-ad:hover {
 
 /* Configurações dos itens dentro do container ad */
 div#itens {
-    background-color: rgb(248, 140, 140);
-    width: 80%;
+    background-color: rgba(248, 140, 140, 0);
+    width: 60%;
     height: 50%;
     margin: auto;
     display: flex;
@@ -71,11 +77,19 @@ div#itens {
 
 /* Configurações do botão dentro dos itens */
 div#itens button {
-    color: purple;
+    width: 300px;
+    color: #E35282;
     background-color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 8px;
+    font-size: 1.5em;
+    padding: 9px;
+}
+
+/* Configurações da imagem de brilho do AD */
+img.spark {
+    width: 20px;
+    filter: drop-shadow(1px 1px 2px #000000) invert(100);
 }
 
 /* Configurações de imagem de brilho e de usuário do ad */
@@ -108,22 +122,27 @@ div#user img{
 header#navigation {
     font-family: var(--fonte-padrao);
     background-color: rgb(66, 66, 104);
-    height: 10%;
-    padding: 0 30px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 9%;
+    
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: white;
 }
 
-/* CONFIGURAÇÃO das IMAGENS que necessitam da inversão de cor */
-/* Fazer MODIFICAÇÕES DE GLOW NAS IMAGENS */
-img.brilho {
-    filter: invert(100);
+/* Configurações da área de info do header */
+div#container-header-info {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
 }
 
 /* Configurações gerais dos selects */
-header#navigation > nav select {
+div#container-header-info > nav select {
     font-weight: bold;
     font-size: 1em;
     background-color: rgba(240, 248, 255, 0);
@@ -134,7 +153,7 @@ header#navigation > nav select {
 /* FAZER UMA CONFIGURAÇÃO DE PSEUDO-ELEMENTO DO SELECT IDIOMA */
 
 /* Configurações dos botões da header */
-header#navigation > nav button {
+div#container-header-info > nav button {
     font-weight: bold;
     font-size: 1.1em;
     padding: 9px;
