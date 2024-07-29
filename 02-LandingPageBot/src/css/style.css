@@ -1,32 +1,48 @@
+/* INÍCIO DAS IMPORTAÇÕES DE FONTE */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* FIM DAS IMPORTAÇÕES DE FONTE */
 
+/* Configurações de Raiz */
 :root {
-    --fonte-titulo: "Roboto", Arial, sans-serif;
+    --fonte-esp: "Roboto", sans-serif;
+    --fonte-btn: "Roboto Condensed", sans-serif;
     --fonte-padrao: "Inter", Verdana, sans-serif;
 }
 
+/* Configurações de corpo e html */
 body, html {
     height: 100%;
-
 }
 
+/* Configurações Básicas de H1 E H2 */
 h1, h2 {
-    font-family: var(--fonte-titulo);
+    font-family: var(--fonte-esp);
     color: white;
 }
 
+/* Configurações de parágrafo */
 p {
     font-family: var(--fonte-padrao);
     font-size: 1.2em;
 }
 
+/* Configurações gerais de botão */
 button {
+    font-family: var(--fonte-btn);
+    font-weight: bold;
     border: none;
-    padding: 10px;
     background-color: white;
     border-radius: 5px;
 }
 
+/* Configurações de pseudo-classe do button */
+button:hover {
+    cursor: pointer;
+}
+
+/* INÍCIO DAS CONFIGURAÇÕES DE CONTAINER-AD */
+/* Configurações da aba de AD do site */
 div#container-ad {
     height: 8%;
     background-color: pink;
@@ -34,6 +50,12 @@ div#container-ad {
     align-items: center;
 }
 
+/* Configurações de hover da área de ad */
+div#container-ad:hover {
+    cursor: pointer;
+}
+
+/* Configurações dos itens dentro do container ad */
 div#itens {
     background-color: rgb(248, 140, 140);
     width: 80%;
@@ -47,9 +69,8 @@ div#itens {
     font-size: 0.7em;
 }
 
+/* Configurações do botão dentro dos itens */
 div#itens button {
-    font-family: var(--fonte-titulo);
-    font-weight: bold;
     color: purple;
     background-color: white;
     text-transform: uppercase;
@@ -57,27 +78,33 @@ div#itens button {
     padding: 8px;
 }
 
+/* Configurações de imagem de brilho e de usuário do ad */
 div#itens img {
     height: 20px;
     padding-right: 2px;
 }
 
+/* DIV que contem as imagens de usuário */
 div#user {
     display: flex;
     align-items: center;
     gap: 10px;
     color: white;
     font-weight: bold;
-
+    font-size: 1.2em;
 }
 
+/* Configurações de imagem dos usuários */
 div#user img{
     background-color: white;
     padding: 6px;
     border-radius: 50%;
     border: 4px solid black;
 }
+/* FIM DAS CONFIGURAÇÕES DE AD DO SITE */
 
+/* INÍCIO DAS CONFIGURAÇÕES DA HEADER */
+/* Configuração da HEADER como um todo */
 header#navigation {
     font-family: var(--fonte-padrao);
     background-color: rgb(66, 66, 104);
@@ -89,10 +116,13 @@ header#navigation {
     align-items: center;
 }
 
+/* CONFIGURAÇÃO das IMAGENS que necessitam da inversão de cor */
+/* Fazer MODIFICAÇÕES DE GLOW NAS IMAGENS */
 img.brilho {
     filter: invert(100);
 }
 
+/* Configurações gerais dos selects */
 header#navigation > nav select {
     font-weight: bold;
     font-size: 1em;
@@ -101,6 +131,9 @@ header#navigation > nav select {
     border: none;
 }
 
+/* FAZER UMA CONFIGURAÇÃO DE PSEUDO-ELEMENTO DO SELECT IDIOMA */
+
+/* Configurações dos botões da header */
 header#navigation > nav button {
     font-weight: bold;
     font-size: 1.1em;
@@ -108,35 +141,43 @@ header#navigation > nav button {
     margin: 0 8px;
 }
 
+/* Configurações do botão amarelo da header */
 button#premium {
     color: rgb(189, 175, 48);
     background-color: rgba(231, 179, 35, 0.281);
 }
 
+/* Configurações do botão azul da header */
 button#discord {
     background-color: #5FB1DD;
     color: white;
 }
 
+/* Configurações de pseudo-classe do botão azul */
 button#discord:hover {
     background-color: #0076FF;
 }
 
+/* Configurações da parte de info do BOT, img e h1 */
 div#bot-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
+/* Configurações da área de img */
 div#bot-info img {
     height: 24px;
     width: 24px;
 }
 
+/* Configurações de h1 */
 div#bot-info h1 {
     font-size: 2.2em;
 }
+/* FIM DA CONFIGURAÇÃO DA HEADER */
 
+/* INÍCIO DA CONFIGURAÇÃO DA SECTION, que posteriormente terá o img  */
 section#container-dados {
     background-color: blueviolet;
     height: 85%;
@@ -144,11 +185,13 @@ section#container-dados {
     position: relative;
 }
 
+/* Configurações do bloco de conteúdo*/
 div#dados {
     display: flex;
     background-color: rgb(153, 153, 17);
     text-align: left;
 
+    /* Configurações de centralização e dimensão */
     height: 50%;
     width: 90%;
     position: absolute;
@@ -158,6 +201,7 @@ div#dados {
     transform: translate(-50%, -50%);
 }
 
+/* Configurações QUE CONTEM DADOS, h1, p e div de buttons */
 div#conteudo-dados {
     display: flex;
     flex-direction: column;
@@ -166,42 +210,48 @@ div#conteudo-dados {
     padding-left: 250px;
 }
 
+/* Configurações de h1 */
 div#conteudo-dados h1{
     font-size: 3em;
     font-weight: 700;
 }
 
+/* Configurações da área de botões */
 div#container-btn {
     display: flex;
     gap: 10px;
 }
 
+/* Configurações dos botões */
+div#container-btn button {
+    width: 220px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Configurações do botão do discord */
 button#btn-discord {
     background-color: #5FB1DD;
     color: white;
     gap: 5px;
 }
 
-button#btn-discord img {
-    filter: invert(100);
-}
-
+/* Configurações da pseudo classe do botão discord */
 button#btn-discord:hover {
     background-color: #0076FF;
 }
+/* FIM DAS CONFIGURAÇÕES DA PARTE DE SECTON DADOS */
 
-button.btn-dados {
-    border: none;
-    display: flex;
-    padding: 10px;
-}
-
+/* INÍCIO DAS CONFIGURAÇÕES DE FOOTER */
 footer {
     height: 130px;
     background-color: rgb(31, 31, 31);
     color: white;
 }
 
+/* Configurações do conteúdo do footer */
 div#footer-item {
     width: 80%;
     padding: 10px;
@@ -210,6 +260,7 @@ div#footer-item {
     font-size: 0.8em;
 }
 
+/* Configurações do h2 do footer */
 div#footer-item  h2{
     margin: 10px 0;
     font-size: 2em;
