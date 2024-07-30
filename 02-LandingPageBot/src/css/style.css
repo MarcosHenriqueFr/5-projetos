@@ -256,10 +256,10 @@ div#conteudo-dados {
     width: 40%;
     background-color: rgba(73, 73, 73, 0.301);
     display: flex;
-    align-items: end;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
+    border-radius: 20px;
 }
 
 /* Configurações de h1 */

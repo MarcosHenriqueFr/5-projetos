@@ -1,0 +1,94 @@
+/* INÍCIO DAS CONFIGURAÇÕES DE RESPONSIVIDADE */
+/* Configurações em laptops */
+@media(max-width: 1440px) {/* Coloca o valor de largura máximo */
+    div#dados {
+        height: 70%;
+    }
+
+    div#conteudo-dados {
+        background-color: rgba(56, 56, 56, 0.63);
+        width: 55%;
+    }
+
+    div#conteudo-dados h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    div#conteudo-dados p {
+        color: white;
+    }
+}
+
+/* Configurações em tablets */
+@media(max-width: 1100px) {
+    div#container-ad {
+        height: 10%;
+    }
+
+    div#itens {
+        height: 100%;
+        width: 90%;
+    }
+
+    div#itens button {
+        height: 80%;
+        font-size: 2em;
+    }
+
+    div#user {
+        font-size: 1.8em;
+    }
+
+    header#navigation {
+        height: 20%;
+        border-width: 1px 0px 1px 0px;
+    }
+
+    div#bot-info h1{
+        font-size: 6em;
+    }
+
+    div#bot-info img{
+        padding-right: 20px;
+        width: 30px;
+        height: 30px;
+    }
+
+    div#container-header-info {
+        flex-direction: column;        
+    }
+
+    div#dados {
+        height: 80%;
+        width: 80%;
+        justify-content: center;
+    }
+
+    div#conteudo-dados {
+        width: 100%;
+    }
+
+    div#conteudo-dados h1 {
+        font-size: 5em;
+    }
+
+    div#conteudo-dados p {
+        font-size: 1.8em;
+    }
+
+    div#container-btn button {
+        font-size: 2em;
+        margin: 20px;
+    }
+
+    button#btn-discord {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    button#btn-discord img {
+        height: 35px;
+    }
+}
