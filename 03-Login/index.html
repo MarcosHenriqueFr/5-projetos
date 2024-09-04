@@ -16,29 +16,33 @@
         </section>
 
         <section id="container-loginInfo">
-            <h2>Login</h2>
-            <p>Bem-vindo de volta! Por favor logue na sua conta.</p>
+            <div id="loginInfo">
+                <h2>Login</h2>
+                <p>Bem-vindo de volta! Por favor logue na sua conta.</p>
 
-            <form action=""><!--Não aninhar forms-->
-                <fieldset>
-                    <legend>E-mail/Usuário</legend>
-                    <input type="text" id="usuario">
-                </fieldset>
-                <fieldset>
-                    <legend>Senha</legend>
-                    <input type="text" id="senha">
-                </fieldset>
+                <form action=""><!--Não aninhar forms-->
+                    <div id="geral-info">
+                        <fieldset>
+                            <legend>E-mail/Usuário</legend>
+                            <input type="text" id="usuario">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Senha</legend>
+                            <input type="text" id="senha">
+                        </fieldset>
 
-                <div id="container-check">
-                    <input type="checkbox" name="remember" id="remember"><label for="remember">Lembre de mim</label>
+                        <div id="container-check">
+                            <input type="checkbox" name="remember" id="remember"> <label for="remember">Lembre de mim</label>
 
-                    <a href="#" target="_blank">Esqueceu sua senha?</a>
-                </div>
+                            <a href="#" target="_blank">Esqueceu sua senha?</a>
+                        </div>
+                        <button type="submit">Logar</button>
+                    </div>
+                    
 
-                <button type="submit">Logar</button>
-
-                <p>Novo aqui? <a href="#" target="_blank">Cadastre-se</a></p>
-            </form>
+                    <p>Novo aqui? <a href="#" target="_blank">Cadastre-se</a></p>
+                </form>
+            </div>
         </section>
     </div>
 

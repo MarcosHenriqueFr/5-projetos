@@ -28,7 +28,7 @@ body {
 
 #container-mensagem {
     width: 50%;
-    background-color: rgb(62, 107, 107);
+    background: linear-gradient(180deg, rgb(62, 107, 107) 10%, yellow);
     border-radius: 10px 0 0 10px;
     padding: 20px;
     color: white;
@@ -45,7 +45,7 @@ body {
 #container-mensagem h1{
     font-size: 4vw;
     text-align: center;
-    font-weight: bold;
+    font-weight: 800;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
 }
 
@@ -55,35 +55,94 @@ body {
 
     background-color: white;
     border-radius: 0 10px 10px 0;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #container-loginInfo h2{
     font-size: 2.5em;
     font-weight: bold;
-    margin: 10px 0 20px;
+    margin: 0 0 10px 0;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.199);
 }
 
 #container-loginInfo > p{
     font-size: 0.9em;
     color: grey;
-    margin: 10px 0 50px;
+    margin: 10px 0 10px;
+}
+
+#geral-info {
+    width: 100%;
 }
 
 fieldset {
-    border: 1px solid;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 5px;
 }
 
 legend {
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-left: 10px;
     color: grey;
 }
 
 input[type="text"]{
-    border: 1px solid;
-    width: 100%;
+    /* border: 1px solid; */
+    width: 95%;
+    padding: 5px;
     
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+#container-check {
+    width: 100%;
+    font-size: 0.8em;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#remember {
+    margin-right: 7px;
+} 
+
+#container-check a {
+    position: absolute;
+    right: 0;
+    color: grey;
+}
+
+button[type="submit"] {
+    margin: 20px 0;
+    font-size: 0.9em;
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form > p{
+    margin: 20px 0;
+    font-size: 0.9em;
+    color: grey;
+}
+
+form > p > a {
+    color: rgb(62, 107, 107);
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Configurações extras de JS */
