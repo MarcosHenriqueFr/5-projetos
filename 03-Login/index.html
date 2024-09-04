@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Página de Login</title>
+</head>
+<body>
+    <div id="container-geral">
+        <section id="container-mensagem">
+            <img src="" alt="Logo">
+            <h1>Bem-vindo de volta</h1>
+        </section>
+
+        <section id="container-loginInfo">
+            <h2>Login</h2>
+            <p>Bem-vindo de volta! Por favor logue na sua conta.</p>
+
+            <form action=""><!--Não aninhar forms-->
+                <fieldset>
+                    <legend>E-mail/Usuário</legend>
+                    <input type="text" id="usuario">
+                </fieldset>
+                <fieldset>
+                    <legend>Senha</legend>
+                    <input type="text" id="senha">
+                </fieldset>
+
+                <div id="container-check">
+                    <input type="checkbox" name="remember" id="remember"><label for="remember">Lembre de mim</label>
+
+                    <a href="#" target="_blank">Esqueceu sua senha?</a>
+                </div>
+
+                <button type="submit">Logar</button>
+
+                <p>Novo aqui? <a href="#" target="_blank">Cadastre-se</a></p>
+            </form>
+        </section>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
