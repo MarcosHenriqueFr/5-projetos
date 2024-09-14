@@ -101,6 +101,15 @@ input[type="text"]{
     font-size: 1.1em;
 }
 
+input[type="password"]{
+    /* border: 1px solid; */
+    width: 100%;
+    background-color: rgba(127, 255, 212, 0);
+    
+    
+    font-size: 1.1em;
+}
+
 input[type="text"]:focus{
     outline: none;
 }

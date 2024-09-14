@@ -31,12 +31,12 @@ function checarEmail(usuarioinput){
 }
 
 function checarSenha(senhainput){
-    //meu regex
-    const senhaval = /()/;
 
-    const aprovado = senha.test(senhainput);
+    senhainput = senhainput.trim();
 
-    usuario.parentElement.classList.remove("verde", "vermelho");
+    const aprovado = senhainput.length == 8 ? true : false;
+
+    senha.parentElement.classList.remove("verde", "vermelho");
     if(aprovado){
         senha.parentElement.classList.add("verde");
     } else {
