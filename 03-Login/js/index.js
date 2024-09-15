@@ -3,6 +3,7 @@ const form = document.querySelector("form");
 const usuario = document.getElementById("usuario");
 const senha = document.getElementById("senha");
 const divGeral = document.getElementById("container-geral");
+const loginInfo = document.getElementById("loginInfo");
 
 //Só vai acontecer depois de pressionar o botão
 form.addEventListener("submit", event => {
@@ -12,8 +13,19 @@ form.addEventListener("submit", event => {
     let segurarSenha = String(senha.value);
     let segurarUsuario = String(usuario.value);
 
-    checarEmail(segurarUsuario);
-    checarSenha(segurarSenha);
+    const aprovEmail = checarEmail(segurarUsuario);
+    const aprovSenha = checarSenha(segurarSenha);
+    
+    if(aprovEmail && aprovSenha){
+        loginInfo.innerHTML = "";
+        console.log(loginInfo);
+        
+        const h2 = document.createElement("h2");
+        h2.textContent = "Você logou com sucesso!!";
+        loginInfo.appendChild(h2);
+    } else {
+        throw new Error("Suas credenciais estão erradas!!!");
+    }
 });
 
 function checarEmail(usuarioinput){
@@ -28,6 +40,8 @@ function checarEmail(usuarioinput){
     } else {
         usuario.parentElement.classList.add("vermelho");
     }
+
+    return aprovado ? true : false;
 }
 
 function checarSenha(senhainput){
@@ -42,4 +56,6 @@ function checarSenha(senhainput){
     } else {
         senha.parentElement.classList.add("vermelho");
     }
+
+    return aprovado ? true : false;
 }
